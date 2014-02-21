@@ -1,0 +1,20 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../components/mocha/mocha.css" />
+</head>
+<body>
+    <div id="mocha"></div>
+    
+    <script src="../components/jquery/dist/jquery.min.js"></script>
+    <script src="../components/chai/chai.js"></script>
+    <script src="../components/mocha/mocha.js"></script>
+    <script src="../components/sinonjs/sinon.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="test.foobar.js"></script>
+    <script>
+        $(function() { mocha.run(); })
+    </script>    
+</body>
+</html>
