@@ -21,7 +21,6 @@ var foobarStore = {
     }
 }
 
-
 describe('Api', function() { 
     describe('/Enum/StatusVenda', function() { 
         
@@ -42,7 +41,11 @@ describe('Api', function() {
 });
 
 describe('Test', function() {
-    it('Error', function() {
-        
+    it('Este é um teste pendente!');
+    it("Teste de ONLY (Deve aplicar o only)", function(){ 
+        expect(true).to.be.true; 
     });
+
+
 });
+
