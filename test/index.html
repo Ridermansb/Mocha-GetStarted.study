@@ -7,14 +7,8 @@
 <body>
     <div id="mocha"></div>
     
-    <script src="../components/jquery/dist/jquery.min.js"></script>
-    <script src="../components/chai/chai.js"></script>
-    <script src="../components/mocha/mocha.js"></script>
-    <script src="../components/sinonjs/sinon.js"></script>
-    <script>mocha.setup('bdd')</script>
-    <script src="test.foobar.js"></script>
-    <script>
-        $(function() { mocha.run(); })
-    </script>    
+    <script 
+        data-main="SpecRunner.js" 
+        src="../components/requirejs/require.js"></script>
 </body>
 </html>

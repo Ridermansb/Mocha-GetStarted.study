@@ -1,9 +1,5 @@
 'use sctrict';
 
-// assert = require("assert")
-
-var expect = chai.expect;
-
 var foobarStore = {
     fooBars: function() {
         $.ajax({
@@ -21,9 +17,8 @@ var foobarStore = {
     }
 }
 
-describe('Api', function() { 
+describe('Api', function(require) { 
     describe('/Enum/StatusVenda', function() { 
-        
         beforeEach(function() {
             sinon.spy($, 'ajax')
         });
@@ -31,10 +26,9 @@ describe('Api', function() {
             $.ajax.restore();
         });
         
-        
         it('fooBars() should execute ajax', function(done) { 
             foobarStore.fooBars();
-            expect($.ajax.calledOnce, "Requisição ajax deve ser realizada!").to.be.true;
+            $.ajax.calledOnce.should.equal(true)
             done();
         });
     });
@@ -43,9 +37,7 @@ describe('Api', function() {
 describe('Test', function() {
     it('Este é um teste pendente!');
     it("Teste de ONLY (Deve aplicar o only)", function(){ 
-        expect(true).to.be.true; 
+        true.should.equal.true; 
     });
-
-
 });
 
